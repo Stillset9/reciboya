@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stillset9.github.io/reciboya/sitemap.xml

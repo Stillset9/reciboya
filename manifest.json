@@ -1,0 +1,16 @@
+{
+  "name": "ReciboYa",
+  "short_name": "ReciboYa",
+  "description": "Presupuestos, recibos y facturas simples en PDF. No es factura electrónica de DGI.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#D40000",
+  "lang": "es-UY",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

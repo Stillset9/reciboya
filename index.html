@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hacer presupuestos y recibos online gratis en PDF | ReciboYa</title>
+  <meta name="description" content="Generador de presupuestos, recibos y facturas simples online gratis. Creá tu modelo de presupuesto en PDF con tu logo y mandalo por WhatsApp. Hecho en Uruguay.">
+  <meta name="theme-color" content="#D40000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ReciboYa">
+  <link rel="canonical" href="https://stillset9.github.io/reciboya/">
+  <meta property="og:title" content="Hacer presupuestos y recibos online gratis en PDF | ReciboYa">
+  <meta property="og:description" content="Generador de presupuestos, recibos y facturas simples online gratis. Creá tu modelo de presupuesto en PDF con tu logo y mandalo por WhatsApp. Hecho en Uruguay.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_UY">
+  <meta property="og:url" content="https://stillset9.github.io/reciboya/">
+  <meta name="google-site-verification" content="egu33_x45AZyZ8bxoFX0SWDfSqIY_1yXkmbAggATzHE" />
+  <meta name="robots" content="index, follow">
+  <meta property="og:site_name" content="ReciboYa">
+  <meta property="og:image" content="https://stillset9.github.io/reciboya/icons/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ReciboYa: presupuestos y recibos online gratis en PDF">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hacer presupuestos y recibos online gratis en PDF | ReciboYa">
+  <meta name="twitter:description" content="Generador de presupuestos, recibos y facturas simples online gratis. Creá tu modelo de presupuesto en PDF con tu logo y mandalo por WhatsApp. Hecho en Uruguay.">
+  <meta name="twitter:image" content="https://stillset9.github.io/reciboya/icons/og-image.png">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "ReciboYa", "url": "https://stillset9.github.io/reciboya/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS, Windows", "inLanguage": "es", "image": "https://stillset9.github.io/reciboya/icons/og-image.png", "description": "Generador de presupuestos, recibos y facturas simples online gratis. Creá tu modelo de presupuesto en PDF con tu logo y mandalo por WhatsApp. Hecho en Uruguay.", "author": {"@type": "Person", "name": "Héctor Juani"}, "offers": [{"@type": "Offer", "name": "Gratis", "price": "0", "priceCurrency": "UYU", "description": "5 documentos por mes"}, {"@type": "Offer", "name": "Pro", "price": "290", "priceCurrency": "UYU", "description": "Documentos ilimitados, suscripción mensual"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿ReciboYa es gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El plan gratis permite crear 5 documentos por mes. El plan Pro cuesta $290 UYU por mes y no tiene límite."}}, {"@type": "Question", "name": "¿ReciboYa emite factura electrónica de DGI?", "acceptedAnswer": {"@type": "Answer", "text": "No. ReciboYa no emite comprobantes fiscales electrónicos (CFE) ni reemplaza la factura electrónica de DGI. Sirve para presupuestos, recibos y facturas simples en PDF."}}, {"@type": "Question", "name": "¿Cómo hago un presupuesto en PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Cargás los datos de tu negocio y tu logo, elegís o agregás el cliente, sumás los ítems y ReciboYa calcula descuento e IVA. Después descargás el PDF o lo compartís por WhatsApp."}}, {"@type": "Question", "name": "¿Necesito internet o crear una cuenta?", "acceptedAnswer": {"@type": "Answer", "text": "No hace falta crear una cuenta. Después de la primera visita funciona sin conexión y se puede instalar en el celular como una app."}}, {"@type": "Question", "name": "¿Dónde se guardan mis datos y los de mis clientes?", "acceptedAnswer": {"@type": "Answer", "text": "En tu propio dispositivo. Los datos de tu negocio y de tus clientes quedan guardados en el navegador del celular o la computadora que uses."}}]}</script>
+  <link rel="icon" href="icons/logo-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" href="fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="app">
+    <aside class="sidenav">
+      <a class="brand" href="#inicio"><img src="icons/logo.svg" alt="ReciboYa"></a>
+      <nav aria-label="Secciones">
+        <a href="#inicio">Inicio</a>
+        <a href="#nuevo">Nuevo documento</a>
+        <a href="#historial">Historial</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#perfil">Mi negocio</a>
+        <a href="#ajustes">Ajustes</a>
+      </nav>
+      <p class="side-note">ReciboYa no emite CFE ni factura electrónica de DGI.</p>
+    </aside>
+    <div class="maincol">
+      <header class="topbar">
+        <a class="brand" href="#inicio"><img src="icons/logo.svg" alt="ReciboYa"></a>
+        <a class="pill" id="planPill" data-testid="plan-pill" href="#ajustes">Gratis · 0/5</a>
+      </header>
+      <main id="contenido">
+        <div class="wrap">
+          <noscript><p class="alert">ReciboYa necesita JavaScript para guardar datos y armar los PDF en tu dispositivo.</p></noscript>
+          <p id="storageBanner" class="alert storage-banner" hidden>Este navegador no deja guardar datos. Podés armar un PDF, pero no se va a recordar.</p>
+          <p id="renewalBanner" class="alert" data-testid="renewal-notice" hidden></p>
+
+          <section data-view="inicio" id="view-inicio">
+            <div class="landing">
+              <div class="hero">
+                <div>
+                  <p class="uy-badge" data-testid="uy-badge">
+                    <img class="uy-flag" src="icons/flag-uy.svg" alt="" width="22" height="15">
+                    <span>Una web uruguaya pensada para el mundo</span>
+                  </p>
+                  <p class="eyebrow">Para el laburo de todos los días</p>
+                  <h1>Presupuestos y recibos online gratis, listos antes de que el cliente se vaya.</h1>
+                  <p class="lead">Armalo en el celular, pasaselo por WhatsApp y seguí con lo tuyo. Sin cuenta y sin servidor. Pensado para Uruguay y el resto de Latinoamérica.</p>
+                  <ol class="hero-list">
+                    <li><strong>Un PDF con tu marca.</strong> Logo, datos y el detalle de cada trabajo, para que se vea prolijo.</li>
+                    <li><strong>Clientes en el teléfono.</strong> Los guardás una vez en este dispositivo y los volvés a usar.</li>
+                    <li><strong>Listo para compartir.</strong> Descargalo o mandalo. Después de la primera visita anda sin conexión.</li>
+                  </ol>
+                  <div class="hero-actions">
+                    <a class="btn btn-primary" id="cta-primero" data-testid="cta-first" href="#nuevo">Crear mi primer presupuesto</a>
+                    <button type="button" id="installBtn" class="btn btn-secondary" hidden>Instalar la app</button>
+                  </div>
+                  <p class="fine-print">No es la factura electrónica de DGI: estos PDF no son CFE.</p>
+                </div>
+                <div class="hero-stage" aria-hidden="true">
+                  <svg class="hero-scene" viewBox="0 0 440 400" fill="none">
+                    <circle cx="236" cy="188" r="148" fill="#FFF1F1"/>
+                    <g class="sheet">
+                      <rect x="86" y="42" width="228" height="292" rx="16" fill="#fff" stroke="#E6E6E6" stroke-width="1.5" transform="rotate(-7 200 188)"/>
+                      <g transform="rotate(-7 200 188)">
+                        <path d="M276 42h38v38L276 42z" fill="#D40000"/>
+                        <path class="hero-line" d="M112 108h92" stroke="#1C1C1C" stroke-width="7" stroke-linecap="round"/>
+                        <path class="hero-line" d="M112 136h128" stroke="#E2E2E2" stroke-width="6" stroke-linecap="round"/>
+                        <path class="hero-line" d="M112 160h110" stroke="#E2E2E2" stroke-width="6" stroke-linecap="round"/>
+                        <path class="hero-line" d="M112 184h74" stroke="#E2E2E2" stroke-width="6" stroke-linecap="round"/>
+                        <path class="hero-line" d="M112 230h132" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round"/>
+                      </g>
+                    </g>
+                    <g class="hero-pen">
+                      <g transform="translate(292 214) rotate(32)">
+                        <rect width="16" height="86" rx="4" fill="#1C1C1C"/>
+                        <path d="M0 86h16l-8 18z" fill="#D40000"/>
+                      </g>
+                    </g>
+                    <g class="hero-check">
+                      <circle cx="318" cy="86" r="22" fill="#D40000"/>
+                      <path d="M308 87l7 7 14-15" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </svg>
+                  <aside class="paper">
+                    <div class="paper-top">
+                      <strong>Taller del barrio</strong>
+                      <span class="paper-kicker">PRESUPUESTO</span>
+                    </div>
+                    <p class="small muted">P-0042 · Un cliente</p>
+                    <div class="paper-row"><span>Mano de obra</span><span>$ 12.000,00</span></div>
+                    <div class="paper-row"><span>Materiales</span><span>$ 8.500,00</span></div>
+                    <div class="paper-total"><span>Total</span><strong>$ 20.500,00</strong></div>
+                    <small>Ejemplo. No es un CFE.</small>
+                  </aside>
+                </div>
+              </div>
+              <section class="how" aria-labelledby="como">
+                <h2 id="como">Cómo funciona</h2>
+                <p class="lead">Tres pasos y ya lo tenés para mandar.</p>
+                <ol class="steps">
+                  <li><span>1</span><div><strong>Tu negocio</strong><p class="small muted">Nombre, logo y si cobrás en pesos o en dólares.</p></div></li>
+                  <li><span>2</span><div><strong>El cliente</strong><p class="small muted">Lo cargás una vez y queda en este teléfono.</p></div></li>
+                  <li><span>3</span><div><strong>El PDF</strong><p class="small muted">Presupuesto, recibo o factura simple, listo para compartir.</p></div></li>
+                </ol>
+              </section>
+              <section class="usecases" aria-labelledby="usos">
+                <h2 id="usos">Hecho para oficios y negocios chicos</h2>
+                <p class="lead">Sin nombres inventados: son los trabajos para los que sirve.</p>
+                <ul class="usecase-grid">
+                  <li>
+                    <h3>Electricistas</h3>
+                    <p>Armá el presupuesto en la obra y pasaselo al cliente antes de guardar las herramientas.</p>
+                  </li>
+                  <li>
+                    <h3>Diseñadores</h3>
+                    <p>Dejá el detalle del trabajo y el total, prolijos, para mandarlos cuando cierren el encargo.</p>
+                  </li>
+                  <li>
+                    <h3>Comercios</h3>
+                    <p>Un recibo simple para cuando te pagan en el momento y hace falta dejar constancia.</p>
+                  </li>
+                </ul>
+              </section>
+              <section class="usecases seo-text" aria-labelledby="sobre">
+                <h2 id="sobre">Generador de presupuestos y recibos en PDF</h2>
+                <p>ReciboYa es una app para hacer presupuestos online gratis desde el celular o la computadora. Elegís un modelo de presupuesto en PDF con tu logo, agregás los trabajos y los materiales, y el total con IVA se calcula solo. También podés hacer un recibo online cuando te pagan, o una factura simple para dejar constancia.</p>
+                <p>Es una app para presupuestos pensada en Uruguay, en pesos o en dólares, y sirve en cualquier país de habla hispana. No emite CFE ni reemplaza la factura electrónica de DGI.</p>
+              </section>
+              <section class="usecases faq" aria-labelledby="faq">
+                <h2 id="faq">Preguntas frecuentes</h2>
+                  <details><summary>¿ReciboYa es gratis?</summary><p>Sí. El plan gratis permite crear 5 documentos por mes. El plan Pro cuesta $290 UYU por mes y no tiene límite.</p></details>
+                  <details><summary>¿ReciboYa emite factura electrónica de DGI?</summary><p>No. ReciboYa no emite comprobantes fiscales electrónicos (CFE) ni reemplaza la factura electrónica de DGI. Sirve para presupuestos, recibos y facturas simples en PDF.</p></details>
+                  <details><summary>¿Cómo hago un presupuesto en PDF?</summary><p>Cargás los datos de tu negocio y tu logo, elegís o agregás el cliente, sumás los ítems y ReciboYa calcula descuento e IVA. Después descargás el PDF o lo compartís por WhatsApp.</p></details>
+                  <details><summary>¿Necesito internet o crear una cuenta?</summary><p>No hace falta crear una cuenta. Después de la primera visita funciona sin conexión y se puede instalar en el celular como una app.</p></details>
+                  <details><summary>¿Dónde se guardan mis datos y los de mis clientes?</summary><p>En tu propio dispositivo. Los datos de tu negocio y de tus clientes quedan guardados en el navegador del celular o la computadora que uses.</p></details>
+              </section>
+              <div class="home-grid">
+                <section class="card">
+                  <h2>Este mes</h2>
+                  <p id="usageText">0 de 5 documentos gratis este mes.</p>
+                  <div class="meter" aria-hidden="true"><span id="usageBar"></span></div>
+                </section>
+                <section class="card">
+                  <h2>Recientes</h2>
+                  <div id="recentList"></div>
+                  <div id="recentEmpty" class="empty">
+                    <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="16" y="12" width="32" height="42" rx="4" fill="#fff" stroke="#1C1C1C" stroke-width="1.6"/><path d="M36 12h6l6 6v4" fill="#D40000"/><path d="M22 30h18M22 36h14M22 42h10" stroke="#1C1C1C" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    <p class="empty-copy">Cuando armes el primero, lo vas a ver acá.</p>
+                  </div>
+                  <a href="#historial">Ver historial</a>
+                </section>
+              </div>
+            </div>
+          </section>
+
+          <section data-view="nuevo" id="view-nuevo" hidden>
+            <div id="needProfile" class="card gate">
+              <p class="eyebrow">Antes de empezar</p>
+              <h1>Primero, tu negocio</h1>
+              <p class="lead">El PDF necesita al menos el nombre de quien lo emite.</p>
+              <a class="btn btn-primary" href="#perfil">Cargar mi negocio</a>
+            </div>
+            <div id="lastDocBanner" class="card success" hidden>
+              <p id="lastDocText"></p>
+              <div class="actions">
+                <button type="button" id="lastDownload" class="btn btn-secondary">Descargar de nuevo</button>
+                <button type="button" id="lastShare" class="btn btn-secondary" hidden>Compartir</button>
+              </div>
+            </div>
+            <form id="docForm" data-testid="doc-form" hidden>
+              <div class="view-head">
+                <p class="eyebrow">Nuevo documento</p>
+                <h1>Armá el PDF</h1>
+                <p class="hint">La factura simple no es un comprobante fiscal electrónico (CFE) de DGI.</p>
+              </div>
+              <p id="docAlert" class="alert" role="alert" hidden></p>
+              <div class="editor">
+                <div class="editor-main stack">
+                  <div class="card stack">
+                    <div class="segment" role="group" aria-label="Tipo de documento">
+                      <button type="button" data-doctype="presupuesto" aria-pressed="true">Presupuesto</button>
+                      <button type="button" data-doctype="recibo" aria-pressed="false">Recibo</button>
+                      <button type="button" data-doctype="factura" aria-pressed="false">Factura</button>
+                    </div>
+                    <p>Número <strong id="docNumber" data-testid="doc-number">P-0001</strong></p>
+                    <div class="fields two">
+                      <div class="field">
+                        <label for="docDate">Fecha</label>
+                        <input id="docDate" type="date" required>
+                      </div>
+                      <div class="field">
+                        <label for="clientSelect">Cliente</label>
+                        <select id="clientSelect">
+                          <option value="">Consumidor final</option>
+                        </select>
+                      </div>
+                    </div>
+                    <p id="noClientsHint" class="hint">Todavía no guardaste clientes. Podés emitir a consumidor final o <a href="#clientes">cargar uno</a>.</p>
+                    <p id="currencyNote" class="hint">Moneda: pesos uruguayos (UYU). La cambiás en Mi negocio.</p>
+                  </div>
+
+                  <div class="card stack">
+                    <h2>Ítems</h2>
+                    <div id="items" class="items"></div>
+                    <button type="button" id="addItem" class="btn btn-secondary">Agregar ítem</button>
+                  </div>
+
+                  <div class="card stack">
+                    <div class="discount-row">
+                      <div class="field">
+                        <label for="discountValue">Descuento</label>
+                        <input id="discountValue" data-testid="discount" inputmode="decimal" value="0">
+                      </div>
+                      <div class="field">
+                        <label for="discountMode" class="sr-only">Tipo de descuento</label>
+                        <select id="discountMode" data-testid="discount-mode">
+                          <option value="percent">%</option>
+                          <option value="amount">$</option>
+                        </select>
+                      </div>
+                    </div>
+                    <label class="check" for="taxEnabled">
+                      <input id="taxEnabled" type="checkbox" checked>
+                      Incluir IVA
+                    </label>
+                    <div class="field">
+                      <label for="taxRate">Tasa en este documento (%)</label>
+                      <input id="taxRate" inputmode="decimal" value="22">
+                    </div>
+                    <div class="field">
+                      <label for="docNotes">Notas</label>
+                      <textarea id="docNotes" maxlength="1000" placeholder="Validez, forma de pago, alias bancario…"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <aside class="totals-col">
+                  <div class="totals" data-testid="totals">
+                    <div><dt>Subtotal</dt><dd id="subtotal" data-testid="subtotal">$ 0,00</dd></div>
+                    <div id="discountRow" hidden><dt id="discountLabel">Descuento</dt><dd id="discountAmount" data-testid="discount-amount">$ 0,00</dd></div>
+                    <div id="netRow" hidden><dt>Base imponible</dt><dd id="netAmount" data-testid="net-amount">$ 0,00</dd></div>
+                    <div id="taxRow"><dt id="taxLabel">IVA 22%</dt><dd id="taxAmount" data-testid="tax-amount">$ 0,00</dd></div>
+                    <div class="grand"><dt>Total</dt><dd id="grandTotal" data-testid="grand-total">$ 0,00</dd></div>
+                  </div>
+                  <div class="actionbar">
+                    <p class="sticky-total"><span class="small muted">Total</span><strong id="stickyTotal">$ 0,00</strong></p>
+                    <button type="submit" class="btn btn-primary" id="generatePdf" data-testid="generate-pdf">Generar PDF</button>
+                  </div>
+                </aside>
+              </div>
+            </form>
+          </section>
+
+          <section data-view="clientes" id="view-clientes" hidden>
+            <div class="view-head">
+              <p class="eyebrow">Agenda</p>
+              <h1>Clientes</h1>
+              <p class="lead">Quedan guardados en este dispositivo. Los documentos ya emitidos conservan los datos de ese momento.</p>
+            </div>
+            <form id="clientForm" class="card stack" data-testid="client-form">
+              <h2>Cliente</h2>
+              <p id="clientAlert" class="alert" role="alert" hidden></p>
+              <div class="fields two">
+                <div class="field full">
+                  <label for="clientName">Nombre del cliente</label>
+                  <input id="clientName" maxlength="80" required placeholder="Ej. Café Puerto">
+                </div>
+                <div class="field">
+                  <label for="clientRut">RUT del cliente (opcional)</label>
+                  <input id="clientRut" maxlength="20" inputmode="numeric" placeholder="12 dígitos">
+                </div>
+                <div class="field">
+                  <label for="clientEmail">Email del cliente</label>
+                  <input id="clientEmail" type="email" maxlength="120" autocomplete="off">
+                </div>
+                <div class="field">
+                  <label for="clientPhone">Teléfono del cliente</label>
+                  <input id="clientPhone" maxlength="40" autocomplete="off">
+                </div>
+                <div class="field">
+                  <label for="clientAddress">Dirección del cliente</label>
+                  <input id="clientAddress" maxlength="160">
+                </div>
+                <div class="field full">
+                  <label for="clientNotes">Notas del cliente</label>
+                  <textarea id="clientNotes" maxlength="500"></textarea>
+                </div>
+              </div>
+              <div class="actions">
+                <button type="submit" class="btn btn-primary" id="clientSaveBtn">Guardar cliente</button>
+                <button type="button" class="btn btn-secondary" id="clientCancel" hidden>Cancelar</button>
+              </div>
+            </form>
+            <div class="card stack" style="margin-top:12px">
+              <label class="sr-only" for="clientSearch">Buscar clientes</label>
+              <input id="clientSearch" type="search" placeholder="Buscar por nombre, RUT o email">
+              <div id="clientList" class="stack" data-testid="client-list"></div>
+              <div id="clientEmpty" class="empty">
+                <svg viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="28" r="10" fill="none" stroke="#1C1C1C" stroke-width="1.6"/><path d="M18 54c2.5-8 8-12 18-12s15.5 4 18 12" fill="none" stroke="#1C1C1C" stroke-width="1.6" stroke-linecap="round"/><circle cx="52" cy="22" r="8" fill="#D40000"/><path d="M49 22h6M52 19v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <p class="empty-copy">Todavía no tenés clientes guardados.</p>
+              </div>
+            </div>
+          </section>
+
+          <section data-view="historial" id="view-historial" hidden>
+            <div class="view-head">
+              <p class="eyebrow">Archivo</p>
+              <h1>Historial</h1>
+              <p class="lead">Volvé a descargar un PDF o duplicá el documento para uno nuevo.</p>
+            </div>
+            <div class="chips" id="historyFilters">
+              <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+              <button type="button" data-filter="presupuesto" aria-pressed="false">Presupuestos</button>
+              <button type="button" data-filter="recibo" aria-pressed="false">Recibos</button>
+              <button type="button" data-filter="factura" aria-pressed="false">Facturas</button>
+            </div>
+            <div id="historyList" class="stack" data-testid="history-list"></div>
+            <div id="historyEmpty" class="empty">
+              <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="18" y="14" width="30" height="40" rx="4" fill="#fff" stroke="#1C1C1C" stroke-width="1.6"/><path d="M36 14h6l6 6" fill="#D40000"/><path d="M26 32h16M26 38h12M26 44h8" stroke="#C8C8C8" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <p class="empty-copy">Todavía no generaste documentos.</p>
+            </div>
+          </section>
+
+          <section data-view="perfil" id="view-perfil" hidden>
+            <div class="view-head">
+              <p class="eyebrow">Emisor</p>
+              <h1>Mi negocio</h1>
+              <p class="lead">Estos datos salen en el encabezado del PDF.</p>
+            </div>
+            <form id="profileForm" class="card stack" data-testid="profile-form">
+              <p id="profileAlert" class="alert" role="alert" hidden></p>
+              <div class="fields two">
+                <div class="field full">
+                  <label for="profileName">Nombre del negocio</label>
+                  <input id="profileName" maxlength="80" required autocomplete="organization" placeholder="Ej. Estudio Luna">
+                </div>
+                <div class="field">
+                  <label for="profileRut">RUT (opcional)</label>
+                  <input id="profileRut" maxlength="20" inputmode="numeric" placeholder="12 dígitos, sin puntos" autocomplete="off">
+                </div>
+                <div class="field">
+                  <label for="profileCurrency">Moneda</label>
+                  <select id="profileCurrency">
+                    <option value="UYU" selected>Pesos uruguayos (UYU)</option>
+                    <option value="USD">Dólares (USD)</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="profileAddress">Dirección</label>
+                  <input id="profileAddress" maxlength="160" autocomplete="street-address" placeholder="Ej. 18 de Julio 1234, Montevideo">
+                </div>
+                <div class="field">
+                  <label for="profilePhone">Teléfono</label>
+                  <input id="profilePhone" maxlength="40" autocomplete="tel" placeholder="099 000 000">
+                </div>
+                <div class="field">
+                  <label for="profileEmail">Email</label>
+                  <input id="profileEmail" type="email" maxlength="120" autocomplete="email" placeholder="hola@tunegocio.uy">
+                </div>
+              </div>
+              <div class="field">
+                <label for="logoInput">Logo</label>
+                <input id="logoInput" type="file" accept="image/png,image/jpeg,image/webp">
+                <p class="hint">Se recorta a un cuadrado y queda solo en este dispositivo.</p>
+                <div class="logo-row">
+                  <img id="logoPreview" class="logo-preview" alt="Vista previa del logo" hidden>
+                  <button type="button" id="logoRemove" class="btn btn-secondary btn-small" hidden>Quitar logo</button>
+                </div>
+              </div>
+              <label class="check" for="profileIva">
+                <input id="profileIva" type="checkbox" checked>
+                Aplicar IVA por defecto
+              </label>
+              <div class="field">
+                <label for="profileIvaRate">Tasa de IVA (%)</label>
+                <input id="profileIvaRate" inputmode="decimal" value="22">
+              </div>
+              <p class="hint">La tasa general en Uruguay es 22%. Podés cambiarla en cada documento.</p>
+              <button type="submit" class="btn btn-primary">Guardar negocio</button>
+            </form>
+          </section>
+
+          <section data-view="ajustes" id="view-ajustes" hidden>
+            <div class="view-head">
+              <p class="eyebrow">Cuenta</p>
+              <h1>Ajustes</h1>
+            </div>
+            <div class="stack">
+              <section class="card stack">
+                <h2>Plan</h2>
+                <p id="proStatus"></p>
+                <p id="limitExplainer" class="hint"></p>
+                <button type="button" id="openProBtn" class="btn btn-primary">Pasar a Pro</button>
+              </section>
+              <section class="card stack">
+                <h2>Respaldo</h2>
+                <p class="hint">Exportá un JSON e importalo en otro dispositivo. Reemplaza lo que haya guardado ahí.</p>
+                <div class="actions">
+                  <button type="button" id="exportJson" class="btn btn-secondary" data-testid="export-json">Exportar respaldo</button>
+                  <button type="button" id="importBtn" class="btn btn-secondary">Importar respaldo</button>
+                  <input id="importJson" data-testid="import-json" type="file" accept="application/json,.json" hidden>
+                </div>
+              </section>
+              <section class="card stack" id="privacidad">
+                <h2>Privacidad</h2>
+                <p>El negocio, los clientes, los documentos y el logo se guardan en este navegador (localStorage). Si borrás los datos del sitio o cambiás de celular sin exportar, se pierden.</p>
+                <p class="hint">Nadie de ReciboYa puede ver tus presupuestos: no salen de este dispositivo. El aviso de pago Pro (email y, si lo adjuntás, el comprobante) sí se manda al confirmar la transferencia.</p>
+              </section>
+              <section class="card stack">
+                <h2>Zona sensible</h2>
+                <p class="hint">Borra negocio, clientes, historial y el plan de este navegador.</p>
+                <button type="button" id="resetBtn" class="btn btn-danger">Borrar datos de este dispositivo</button>
+              </section>
+            </div>
+          </section>
+
+          <footer class="site-footer">
+            <div class="footer-top">
+              <a class="footer-logo" href="#inicio"><img src="icons/logo.svg" alt="ReciboYa"></a>
+              <nav aria-label="Pie">
+                <a href="#inicio">Inicio</a>
+                <a href="#nuevo">Nuevo documento</a>
+                <a href="#clientes">Clientes</a>
+                <a href="#historial">Historial</a>
+                <a href="#ajustes">Privacidad</a>
+              </nav>
+            </div>
+            <p class="uy-badge" data-testid="uy-badge">
+              <img class="uy-flag" src="icons/flag-uy.svg" alt="" width="22" height="15">
+              <span>Una web uruguaya pensada para el mundo</span>
+            </p>
+            <p data-testid="disclaimer">Los PDF de ReciboYa son presupuestos, recibos y facturas simples. No son comprobantes fiscales electrónicos (CFE) ni reemplazan la factura electrónica de DGI.</p>
+            <p>Tus datos quedan en este dispositivo. Nadie de ReciboYa los ve.</p>
+            <p class="copyright">© Héctor Juani / Stillset9. Todos los derechos reservados.</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <nav class="tabbar" aria-label="Principal">
+    <a href="#inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20H4z"/><path d="M9 20v-6h6v6"/></svg>
+      <span>Inicio</span>
+    </a>
+    <a href="#nuevo">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+      <span>Crear</span>
+    </a>
+    <a href="#historial">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6h12M8 12h12M8 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>
+      <span>Historial</span>
+    </a>
+    <button type="button" id="tabCuenta" data-testid="tab-cuenta">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3"/><path d="M5 19c1.5-3 3.8-4.5 7-4.5S17.5 16 19 19"/></svg>
+      <span>Cuenta</span>
+    </button>
+  </nav>
+
+  <dialog id="cuentaSheet" class="sheet" aria-label="Cuenta">
+    <a class="sheet-link" href="#clientes">Clientes</a>
+    <a class="sheet-link" href="#perfil">Mi negocio</a>
+    <a class="sheet-link" href="#ajustes">Ajustes y respaldo</a>
+  </dialog>
+
+  <dialog id="proDialog" class="modal modal-pay" data-testid="pro-dialog" aria-labelledby="proTitle">
+    <p class="eyebrow">Plan Pro</p>
+    <h2 id="proTitle">Pasar a Pro</h2>
+    <p id="proText"></p>
+    <ul class="benefit-list">
+      <li>Documentos sin límite por mes.</li>
+      <li>El PDF sale sin el pie «Hecho con ReciboYa».</li>
+    </ul>
+    <p class="price-tag" id="proPrice" data-testid="pro-price"></p>
+    <div class="pay-block">
+      <h3>Transferencia por Prex</h3>
+      <p class="hint">Titular: <span data-testid="prex-holder"></span></p>
+      <div class="kv">
+        <div>
+          <p class="hint">Cuenta Prex</p>
+          <strong data-testid="prex-account"></strong>
+        </div>
+        <button type="button" class="btn btn-secondary btn-small" id="copyPrex" data-testid="copy-prex">Copiar</button>
+      </div>
+      <p class="hint">Poné esta referencia en la transferencia.</p>
+      <div class="kv">
+        <div>
+          <p class="hint">Referencia de este dispositivo</p>
+          <strong data-testid="device-id"></strong>
+        </div>
+        <button type="button" class="btn btn-secondary btn-small" id="copyDevice" data-testid="copy-device">Copiar</button>
+      </div>
+    </div>
+    <form id="payForm" class="stack">
+      <div class="field">
+        <label for="payEmail">Email</label>
+        <input id="payEmail" data-testid="pay-email" type="email" autocomplete="email" required placeholder="Donde te mandamos la clave">
+      </div>
+      <div class="field">
+        <label for="payName">Nombre (opcional)</label>
+        <input id="payName" data-testid="pay-name" autocomplete="name" maxlength="80">
+      </div>
+      <div class="field">
+        <label for="payReceipt">Foto del comprobante (opcional)</label>
+        <input id="payReceipt" data-testid="pay-receipt" type="file" accept="image/jpeg,image/png,image/webp">
+      </div>
+      <p id="workerNote" class="hint" data-testid="worker-note">La confirmación automática no está conectada. Mandá el comprobante por WhatsApp. Si ya tenés un código de emergencia, pegalo abajo.</p>
+      <p id="payError" class="alert" role="alert" hidden></p>
+      <button type="submit" class="btn btn-primary btn-block" data-testid="ya-transferi">Ya transferí</button>
+    </form>
+    <a id="whatsappProof" class="btn btn-secondary btn-block" data-testid="whatsapp-proof" target="_blank" rel="noopener noreferrer">Mandar comprobante por WhatsApp</a>
+    <div id="requestSent" class="ok-panel" data-testid="solicitud-enviada" hidden>
+      <h3>Solicitud enviada</h3>
+      <p>Recibimos el aviso. Cuando confirmemos la transferencia te mandamos la clave a ese email.</p>
+    </div>
+    <form id="proForm" class="stack">
+      <h3>Activar Pro</h3>
+      <div class="field">
+        <label for="proEmail">Email de la clave</label>
+        <input id="proEmail" data-testid="pro-email" type="email" autocomplete="email" placeholder="El mismo con el que avisaste el pago">
+      </div>
+      <div class="field">
+        <label for="proCode">Clave o código</label>
+        <input id="proCode" data-testid="pro-code" autocomplete="off" spellcheck="false" placeholder="Pegá la clave RYPRO o un código de emergencia">
+      </div>
+      <p id="proError" class="alert" role="alert" hidden></p>
+      <button type="submit" class="btn btn-primary">Activar Pro</button>
+    </form>
+    <div id="activationOk" class="ok-panel" data-testid="activacion-ok" hidden>
+      <h3>Pro activo</h3>
+      <p id="activationOkText"></p>
+    </div>
+    <button type="button" id="closePro" class="btn btn-secondary btn-block">Seguir en el plan gratis</button>
+  </dialog>
+
+  <dialog id="confirmDialog" class="modal" data-testid="confirm-dialog" aria-labelledby="confirmTitle">
+    <h2 id="confirmTitle">¿Confirmar?</h2>
+    <p id="confirmText"></p>
+    <div class="actions">
+      <button type="button" id="confirmYes" class="btn btn-primary" data-testid="confirm-yes">Confirmar</button>
+      <button type="button" id="confirmNo" class="btn btn-secondary" data-testid="confirm-no">Cancelar</button>
+    </div>
+  </dialog>
+
+  <div id="toasts" aria-live="polite"></div>
+  <script src="vendor/jspdf.umd.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
